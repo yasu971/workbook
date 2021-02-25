@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProgrammingPractice</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <header class="header">
+      <div class="inner">
+        <div class="nav">
+          <div class="nav__left">
+
+            <h1><%= link_to "Programming Practice", root_path %></h1>
+          </div>
+
+      <% if user_signed_in? %>
+      <div class="nav__left">
+        <%= "ようこそ、" %>
+        <%= link_to "#{current_user.nickname}さん", "/users/#{current_user.id}", class: :greeting__link%>
+      </div>
+      <% end %>
+          
+        <% if user_signed_in? %>
+            <div class="nav__right">
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
+              <%= link_to "Practice", questions_index2_path, class: :nav__btn %>
+              <%= link_to "New Practice", new_question_path, class: :nav__btn %>
+            </div>
+        <% else %>
+            <div class="nav__right">
+            <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
+            <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
+            </div>
+        <% end %>
+        </div>
+      </div>
+    </header>
+
+    <%= yield %>
+  </body>
+    <footer class="footer">
+  <p>Copyright(C) Programming Practice ALL RIGHTS RESERVED.</p>
+</footer>
+  
+</html>

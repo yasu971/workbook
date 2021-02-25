@@ -1,0 +1,22 @@
+<main class="main">
+
+    <h2>問題ページ</h2><br/>
+
+<% @questions.each do |question| %>
+  <div>
+    <div>
+    <%= link_to question.title, question_path(question.id), class: :card__title%><br/>
+      問題.<%= question.content %><br/>
+    </div>
+    <div>
+      1.<%= question.option1 %><br/>
+      2.<%= question.option2 %><br/>
+      3.<%= question.option3 %><br/>
+      4.<%= question.option4 %><br/>
+      <br/>
+    </div>    
+  </div>
+<% end %>
+    <%= link_to "解答・解説へ", questions_answer_path, class: :nav__btn %>
+
+</main>

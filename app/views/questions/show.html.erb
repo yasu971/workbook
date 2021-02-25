@@ -1,0 +1,62 @@
+<main class="main">
+
+    <h2>問題詳細ページ</h2><br/>
+
+  <div>
+    <div>
+      <%= @question.title %><br/>
+      問題.<%= @question.content %><br/>
+    </div>
+    <div>
+      1.<%= @question.option1 %><br/>
+      2.<%= @question.option2 %><br/>
+      3.<%= @question.option3 %><br/>
+      4.<%= @question.option4 %><br/>
+      <br/>
+    </div>
+    <div>
+      <b>解答:</b><%= @question.answer %><br/>
+      <b>解説:</b><%= @question.commentary %><br/>
+      <br/>
+    </div>
+    <div>
+      <%= link_to "by #{@question.user.nickname}", user_path(@question.user), class: :prototype__user %>
+
+          <% if user_signed_in? && current_user.id == @question.user_id %>
+        <div class="prototype__manage">
+          <%= link_to "編集する", edit_question_path, class: :prototype__btn %>
+          <%= link_to "削除する", question_path(@question.id), method: :delete, class: :prototype__btn %>
+        </div>
+          <% end %>
+    </div>
+
+        <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
+        <% if user_signed_in? %>
+           <%= form_with(model: [@question, @comment], local: true) do |f| %>
+             <div class=“field”>
+              <%= f.label :text, "コメント" %>
+              <br />
+              <%= f.text_field :text %>
+             </div>
+             <div class="actions">
+              <%= f.submit "送信する", class: :form__btn %>
+             </div>
+            <% end %>
+        <% end %>
+
+        <ul class="comments_lists">
+          <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+          <% if @comments %>
+            <% @comments.each do |comment| %>
+              <li class="comments_list" >
+              <%= comment.text %>
+                <%= link_to comment.user.nickname, "/users/#{comment.user_id}", class: :comment_user %>
+            <% end %>
+          <% end %>
+            </li>
+          <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
+        </ul>
+
+  </div>
+
+</main>

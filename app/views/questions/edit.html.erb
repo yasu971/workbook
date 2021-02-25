@@ -1,0 +1,56 @@
+<div class="main">
+  <div class="inner">
+    <div class="form__wrapper">
+      <h2 class="page-heading">問題編集</h2>
+
+          <%= form_with(model: @question, local: true) do |f| %>
+
+          <div class="field">
+            <%= f.label :title, "問題の名称" %><br />
+            <%= f.text_field :title, class: :form__text %>
+          </div>
+
+          <div class="field">
+            <%= f.label :content, "設問" %><br />
+            <%= f.text_area :content, class: :form__text %>
+          </div>
+
+          <div class="field">
+            <%= f.label :option1, "選択肢1" %><br />
+            <%= f.text_area :option1, class: :form__text %>
+          </div>
+
+          <div class="field">
+            <%= f.label :option2, "選択肢2" %><br />
+            <%= f.text_area :option2, class: :form__text %>
+          </div>
+
+          <div class="field">
+            <%= f.label :option3, "選択肢3" %><br />
+            <%= f.text_area :option3, class: :form__text %>
+          </div>
+
+          <div class="field">
+            <%= f.label :option4, "選択肢4" %><br />
+            <%= f.text_area :option4, class: :form__text %>
+          </div>
+
+          <div class="field">
+            <%= f.label :answer, "解答" %><br />
+            <%= f.text_area :answer, class: :form__text %>
+          </div>
+
+          <div class="field">
+            <%= f.label :commentary, "解説" %><br />
+            <%= f.text_area :commentary, class: :form__text %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "保存する", class: :form__btn  %>
+          </div>
+
+        <% end %>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<main class="main">
+
+    <h2>解答・解説ページ</h2><br/>
+
+<% @questions.each do |question| %>
+  <div>
+    <div>
+      <%= question.title %><br/>
+      問題.<%= question.content %><br/>
+    </div>
+    <div>
+      1.<%= question.option1 %><br/>
+      2.<%= question.option2 %><br/>
+      3.<%= question.option3 %><br/>
+      4.<%= question.option4 %><br/>
+      <br/>
+    </div>
+    <div>
+      <b>解答:</b><%= question.answer %><br/>
+      <b>解説:</b><%= question.commentary %><br/>
+      <br/>
+    </div>
+  </div>
+<% end %>
+
+</main>
