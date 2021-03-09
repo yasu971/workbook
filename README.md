@@ -18,8 +18,11 @@ https://workbook-1421.herokuapp.com/
 学生が、無料で、Web上で学習出来るサイトを作成しました。
 
 ## DEMO
-![デモ画像](./app/assets/images/demo.png)
+・トップ画面
+![デモ画像1](./app/assets/images/demo.png)
 
+・問題画面
+![デモ画像2](./app/assets/images/demo.png)
 
 ## 工夫したポイント:
 登録されている問題を解くことが出来る。
