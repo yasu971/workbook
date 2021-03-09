@@ -10,8 +10,8 @@ https://workbook-1421.herokuapp.com/
 ## 制作背景(意図)：
 学生が、無料で、Web上で学習出来るサイトを作成しました。
 
-## DEMO(gif動画)
-![デモ画像](./app/assets/images/demo.gif)
+## DEMO
+![デモ画像](./app/assets/images/demo.png)
 
 
 ## 工夫したポイント:
