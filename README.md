@@ -7,6 +7,13 @@ WorkBook
 ## 本番環境:
 https://workbook-1421.herokuapp.com/
 
+ログイン情報(テスト用)
+
+・Eメール:sample@samle.com
+
+・パスワード:yasu971
+
+
 ## 制作背景(意図)：
 学生が、無料で、Web上で学習出来るサイトを作成しました。
 
