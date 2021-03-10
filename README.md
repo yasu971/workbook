@@ -25,8 +25,7 @@ https://workbook-1421.herokuapp.com/
 ![デモ画像2](./app/assets/images/demo2.png)
 
 ・問題投稿画面
-![デモ画像3]
-(./app/assets/images/demo3.gif)
+![デモ画像3](./app/assets/images/demo3.gif)
 
 ## 工夫したポイント:
 登録されている問題を解くことが出来る。
