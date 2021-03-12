@@ -20,6 +20,10 @@ body {
   color: #3b4043;
 }
 
+.line {
+  text-decoration: underline;
+}
+
 li {
   list-style: none;
 }
