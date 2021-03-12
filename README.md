@@ -23,7 +23,7 @@ https://workbook-1421.herokuapp.com/
 ![デモ画像1](./app/assets/images/demo.png)
 
 ・問題画面
-![デモ画像2](./app/assets/images/demo2.png)
+![デモ画像2](./app/assets/images/demo2.gif)
 
 ・問題投稿画面
 ![デモ画像3](./app/assets/images/demo3.gif)
