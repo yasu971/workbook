@@ -20,6 +20,10 @@ body {
   color: #3b4043;
 }
 
+.main {
+  margin-left: 30px;
+}
+
 .line {
   text-decoration: underline;
 }
