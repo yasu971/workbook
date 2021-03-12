@@ -1,19 +1,25 @@
 <main class="main">
 
-    <h2>問題ページ</h2><br/>
+    <h1>問題ページ</h1><br/>
 
 <% @questions.each do |question| %>
   <div>
     <div>
+      <h2>
     <%= link_to question.title, question_path(question.id), class: :line%><br/>
+      </h2>
+      <h3>
       問題.<%= question.content %><br/>
+      </h3>
     </div>
     <div>
+      <h4>
       A.<%= question.option1 %><br/>
       B.<%= question.option2 %><br/>
       C.<%= question.option3 %><br/>
       D.<%= question.option4 %><br/>
       <br/>
+      </h4>
     </div>    
   </div>
 <% end %>
